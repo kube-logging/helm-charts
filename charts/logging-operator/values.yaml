@@ -79,8 +79,6 @@ monitoring:
     metricRelabelings: []
     relabelings: []
 
-
-
 # -- Pod SecurityContext for Logging operator. [More info](https://kubernetes.io/docs/concepts/policy/security-context/)
 ## SecurityContext holds pod-level security attributes and common container settings.
 ## This defaults to non root user with uid 1000 and gid 2000.	*v1.PodSecurityContext	false
