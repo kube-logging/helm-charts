@@ -1,0 +1,30 @@
+apiVersion: v1
+entries:
+  logging-operator:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Moved to to location
+      artifacthub.io/images: |
+        - name: logging-operator
+          image: ghcr.io/kube-logging/logging-operator:4.0.0-rc19
+    apiVersion: v2
+    appVersion: 4.0.0-rc19
+    created: "2023-02-08T23:51:33.120193103Z"
+    description: Logging operator for Kubernetes based on Fluentd and Fluentbit.
+    digest: d48208a6c121ab1469fc99013110a037e89060fa85bffbf919f83eb7c6606637
+    home: https://kube-logging.github.io
+    keywords:
+    - logging
+    - fluentd
+    - fluentbit
+    kubeVersion: '>=1.16.0-0'
+    name: logging-operator
+    sources:
+    - https://github.com/kube-logging/logging-operator
+    - https://github.com/kube-logging/helm-charts/tree/main/charts/logging-operator
+    type: application
+    urls:
+    - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-4.0.0-rc19-1/logging-operator-4.0.0-rc19-1.tgz
+    version: 4.0.0-rc19-1
+generated: "2023-02-08T23:51:33.120206903Z"
