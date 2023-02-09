@@ -29,7 +29,7 @@ jobs:
         uses: helm/chart-testing-action@v2.3.1
 
       - name: Lint
-        run: ct lint --validate-maintainers=false
+        run: ct lint --config ct.yaml
 
       - name: Check generated docs
         run: |
@@ -40,7 +40,7 @@ jobs:
       - name: Detect changes
         id: changes
         run: |
-          changed=$(ct list-changed)
+          changed=$(ct list-changed --config ct.yaml)
           if [[ -n "$changed" ]]; then
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
@@ -74,20 +74,6 @@ jobs:
       - name: Set up chart-testing
         uses: helm/chart-testing-action@v2.3.1
 
-      - name: Exclude unsupported charts
-        id: exclusions
-        run: |
-          CHARTS=()
-
-          for chart in $(ct list-changed); do
-            if cat exclusions | grep "${chart} ${{ matrix.kube }}" > /dev/null; then
-              echo "Excluding chart from testing: ${chart}"
-              CHARTS+=("${chart#charts/}")
-            fi
-          done
-
-          echo charts=$(IFS=,; echo "${CHARTS[*]}") >> $GITHUB_OUTPUT
-
       # See https://github.com/kubernetes-sigs/kind/releases/tag/v0.17.0
       - name: Determine KinD node image version
         id: node_image
@@ -120,4 +106,4 @@ jobs:
           node_image: ${{ steps.node_image.outputs.image }}
 
       - name: Test
-        run: ct install --excluded-charts "${{ steps.exclusions.outputs.charts }}"
+        run: ct install --config ct.install.yaml

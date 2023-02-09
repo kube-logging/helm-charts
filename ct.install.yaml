@@ -1,0 +1,14 @@
+remote: origin
+target-branch: main
+chart-dirs:
+  - charts
+upgrade: true
+validate-maintainers: false
+chart-repos:
+  - minio=https://helm.min.io/
+  - banzaicloud=https://kubernetes-charts.banzaicloud.com/
+
+# Separate config for install is necessary to still lint otherwise uninstallable charts
+excluded-charts:
+  - logging-demo
+  - logging-operator-logging
