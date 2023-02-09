@@ -1,0 +1,109 @@
+# Default values for logging-demo.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# -- A name in place of the chart name for `app:` labels.
+nameOverride: ""
+
+# -- A name to substitute for the full names of resources.
+fullnameOverride: ""
+
+loggingOperator:
+  clusterDomain: cluster.local
+  controlNamespace:
+
+  # -- Fluentd configuration
+  fluentd: {}
+#    metrics:
+#      serviceMonitor: false
+#      prometheusAnnotations: false
+#      port: 24231
+#      path: "/metrics"
+#      timeout: "30s"
+#      interval: "15s"
+
+  # -- Fluentbit configuration
+  fluentbit: {}
+#    metrics:
+#      serviceMonitor: false
+#      prometheusAnnotations: false
+#      port: 2020
+#      path: "/api/v1/metrics/prometheus"
+#      timeout: "30s"
+#      interval: "15s"
+# If specified, the pod's tolerations.
+# ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+#     tolerations:
+#      - key: "node-role.kubernetes.io/master"
+#        operator: "Equal"
+#        effect: "NoSchedule"
+#      - key: "node.kubernetes.io/unschedulable"
+#        operator: "Equal"
+#        effect: "NoSchedule"
+
+  tls:
+    # -- Enable secure connection between fluentd and fluent-bit
+    enabled: true
+
+    # -- Specified secret name, which contain tls certs
+    fluentdSecretName: ""
+
+    # -- Specified secret name, which contain tls certs
+    fluentbitSecretName: ""
+
+    # Shared key between nodes (fluentd-fluentbit)
+    sharedKey: ""
+
+# Logging Operator Outputs
+# Enable Grafana Loki logging output
+file:
+  enabled: false
+
+# Enable Minio logging output and install chart
+minio:
+  enabled: false
+  existingSecret: logging-s3
+  persistence:
+    enabled: false
+  environment:
+    MINIO_REGION: test_region
+  defaultBucket:
+    enabled: true
+    name: demo
+  resources:
+    requests:
+      memory: 256Mi
+
+elasticsearch:
+  # -- Enable ElasticSearch logging output
+  enabled: false
+
+loki:
+  # -- Enable Grafana Loki logging output
+  enabled: false
+
+kafka:
+  # -- Enable Kafka logging output
+  enabled: false
+
+cloudwatch:
+  # -- Enable AWS Cloudwatch logging output
+  enabled: false
+  # AWS Credentials
+  aws:
+    secret_key: ""
+    access_key: ""
+    region: ""
+    log_group_name: ""
+    log_stream_name: ""
+
+logdna:
+  # -- Enable LogDNA logging output
+  enabled: false
+  api_key: ""
+  app: ""
+  hostname: ""
+
+logGenerator:
+  # -- Enable Demo Log-Gen application
+  enabled: true
