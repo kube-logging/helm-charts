@@ -29,7 +29,7 @@ jobs:
         uses: helm/chart-testing-action@v2.3.1
 
       - name: Lint
-        run: ct lint --validate-maintainers=false
+        run: ct lint --config ct.yaml
 
       - name: Check generated docs
         run: |
@@ -40,7 +40,7 @@ jobs:
       - name: Detect changes
         id: changes
         run: |
-          changed=$(ct list-changed)
+          changed=$(ct list-changed --config ct.yaml)
           if [[ -n "$changed" ]]; then
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
@@ -79,7 +79,7 @@ jobs:
         run: |
           CHARTS=()
 
-          for chart in $(ct list-changed); do
+          for chart in $(ct list-changed --config ct.yaml); do
             if cat exclusions | grep "${chart} ${{ matrix.kube }}" > /dev/null; then
               echo "Excluding chart from testing: ${chart}"
               CHARTS+=("${chart#charts/}")
@@ -120,4 +120,4 @@ jobs:
           node_image: ${{ steps.node_image.outputs.image }}
 
       - name: Test
-        run: ct install --excluded-charts "${{ steps.exclusions.outputs.charts }}"
+        run: ct install --config ct.yaml --excluded-charts "${{ steps.exclusions.outputs.charts }}"
