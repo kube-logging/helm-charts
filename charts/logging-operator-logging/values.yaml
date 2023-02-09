@@ -67,8 +67,6 @@ nodeAgents: {}
 #      tls:
 #        enabled: false
 
-
-
 # -- Whether to skip invalid Flow and ClusterFlow resources
 skipInvalidResources: false
 
