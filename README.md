@@ -1,6 +1,6 @@
 # Helm Charts
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/kube-logging/helm-charts/release.yaml?branch=master&style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/kube-logging/helm-charts/release.yaml?branch=main&style=flat-square)
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kube-logging)](https://artifacthub.io/packages/search?repo=kube-logging)
 ![Kubernetes Version](https://img.shields.io/badge/k8s%20version-%3E=1.19-3f68d7.svg?style=flat-square)
 
