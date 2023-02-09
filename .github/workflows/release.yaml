@@ -31,6 +31,11 @@ jobs:
         with:
           version: v3.10.3
 
+      - name: Add dependency chart repos
+        run: |
+          helm repo add minio https://helm.min.io/
+          helm repo add banzaicloud https://kubernetes-charts.banzaicloud.com/
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.1
         with:
