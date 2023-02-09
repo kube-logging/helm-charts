@@ -120,4 +120,4 @@ jobs:
           node_image: ${{ steps.node_image.outputs.image }}
 
       - name: Test
-        run: ct install --config ct.yaml --excluded-charts "${{ steps.exclusions.outputs.charts }}"
+        run: ct install --config ct.install.yaml --excluded-charts "${{ steps.exclusions.outputs.charts }}"
