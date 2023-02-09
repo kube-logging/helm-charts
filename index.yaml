@@ -43,6 +43,38 @@ entries:
           image: ghcr.io/banzaicloud/config-reloader:0.0.1
     apiVersion: v2
     appVersion: 4.0.0-rc17
+    created: "2023-02-09T00:21:36.120604755Z"
+    description: A Helm chart to configure logging resource for the Logging operator.
+    digest: 6a9e5772f7fad086e0d2058b4606d002fdefed19e8253fabf0b600efc088a78d
+    home: https://kube-logging.github.io
+    keywords:
+    - logging
+    - fluentd
+    - fluentbit
+    kubeVersion: '>=1.16.0-0'
+    name: logging-operator-logging
+    sources:
+    - https://github.com/kube-logging/logging-operator
+    - https://github.com/kube-logging/helm-charts/tree/main/charts/logging-operator-logging
+    type: application
+    urls:
+    - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-logging-4.0.0-rc17-1/logging-operator-logging-4.0.0-rc17-1.tgz
+    version: 4.0.0-rc17-1
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Moved to to location
+      artifacthub.io/images: |
+        - name: fluent-bit
+          image: fluent/fluent-bit:1.9.5
+        - name: fluentd
+          image: ghcr.io/banzaicloud/fluentd:v1.14.6-alpine-5
+        - name: logging-operator
+          image: ghcr.io/kube-logging/logging-operator:4.0.0-rc19
+        - name: config-reloader
+          image: ghcr.io/banzaicloud/config-reloader:0.0.1
+    apiVersion: v2
+    appVersion: 4.0.0-rc17
     created: "2023-02-09T00:07:58.709829575Z"
     description: A Helm chart to configure logging resource for the Logging operator.
     digest: 6dd4a6647a43835964b13baa693b5e8a83a1aed24f41391d24e0c024954d7a8a
@@ -60,4 +92,4 @@ entries:
     urls:
     - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-logging-4.0.0-rc17/logging-operator-logging-4.0.0-rc17.tgz
     version: 4.0.0-rc17
-generated: "2023-02-09T00:07:58.709835575Z"
+generated: "2023-02-09T00:21:36.120618555Z"
