@@ -3,3 +3,4 @@ target-branch: main
 chart-dirs:
   - charts
 upgrade: true
+validate-maintainers: false
