@@ -118,6 +118,30 @@ entries:
     urls:
     - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-4.0.0-rc19-1/logging-operator-4.0.0-rc19-1.tgz
     version: 4.0.0-rc19-1
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Moved to to location
+      artifacthub.io/images: |
+        - name: logging-operator
+        image: ghcr.io/kube-logging/log-generator:v0.4.1
+    apiVersion: v2
+    appVersion: 0.4.1
+    created: "2023-02-15T11:43:01.689357815Z"
+    description: A Helm chart for Log-generator
+    digest: d06b0db8f06e50bb70140dbc6b74488f044488a04b109c930647a4b1d941db6c
+    home: https://kube-logging.github.io
+    keywords:
+    - logging
+    kubeVersion: '>=1.16.0-0'
+    name: logging-operator
+    sources:
+    - https://github.com/kube-logging/log-generator
+    - https://github.com/kube-logging/helm-charts/tree/main/charts/log-generator
+    type: application
+    urls:
+    - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-0.2.0/logging-operator-0.2.0.tgz
+    version: 0.2.0
   logging-operator-logging:
   - annotations:
       artifacthub.io/changes: |
@@ -215,4 +239,4 @@ entries:
     urls:
     - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-logging-4.0.0-rc17/logging-operator-logging-4.0.0-rc17.tgz
     version: 4.0.0-rc17
-generated: "2023-02-09T10:44:00.357299186Z"
+generated: "2023-02-15T11:43:01.689382716Z"
