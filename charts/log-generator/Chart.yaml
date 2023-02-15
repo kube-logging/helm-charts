@@ -1,0 +1,20 @@
+apiVersion: v2
+type: application
+name: logging-operator
+version: 0.2.0
+appVersion: 0.4.1
+kubeVersion: ">=1.16.0-0"
+description: A Helm chart for Log-generator
+keywords:
+  - logging
+home: https://kube-logging.github.io
+sources:
+  - https://github.com/kube-logging/log-generator
+  - https://github.com/kube-logging/helm-charts/tree/main/charts/log-generator
+annotations:
+  artifacthub.io/changes: |
+    - kind: changed
+      description: Moved to to location
+  artifacthub.io/images: |
+    - name: logging-operator
+    image: ghcr.io/kube-logging/log-generator:v0.4.1
