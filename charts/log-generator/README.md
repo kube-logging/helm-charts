@@ -1,6 +1,6 @@
-# logging-operator
+# log-generator
 
-![version: 0.2.0](https://img.shields.io/badge/version-0.2.0-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: 0.4.1](https://img.shields.io/badge/app%20version-0.4.1-informational?style=flat-square) ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-logging--operator-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/logging-operator)
+![version: 0.2.0](https://img.shields.io/badge/version-0.2.0-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: 0.4.1](https://img.shields.io/badge/app%20version-0.4.1-informational?style=flat-square) ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-log--generator-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/log-generator)
 
 A Helm chart for Log-generator
 
@@ -10,7 +10,7 @@ A Helm chart for Log-generator
 
 ```bash
 helm repo add kube-logging https://kube-logging.github.io/helm-charts
-helm install --generate-name --wait kube-logging/logging-operator
+helm install --generate-name --wait kube-logging/log-generator
 ```
 
 ## Values

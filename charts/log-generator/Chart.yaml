@@ -1,6 +1,6 @@
 apiVersion: v2
 type: application
-name: logging-operator
+name: log-generator
 version: 0.2.0
 appVersion: 0.4.1
 kubeVersion: ">=1.16.0-0"
@@ -17,4 +17,4 @@ annotations:
       description: Moved to to location
   artifacthub.io/images: |
     - name: logging-operator
-    image: ghcr.io/kube-logging/log-generator:v0.4.1
+      image: ghcr.io/kube-logging/log-generator:v0.4.1
