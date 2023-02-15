@@ -1,0 +1,18 @@
+{{- if .Values.rbac.enabled }}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name:  {{ include "log-socket.fullname" . }}
+  labels:
+{{ include "log-socket.labels" . | indent 4 }}
+subjects:
+  - kind: ServiceAccount
+    name:  {{ include "log-socket.fullname" . }}
+    namespace: {{ include "log-socket.namespace" . }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: {{ include "log-socket.fullname" . }}
+
+  {{- end }}

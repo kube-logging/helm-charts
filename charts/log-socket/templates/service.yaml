@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "log-socket.fullname" . }}
+  labels:
+    {{- include "log-socket.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.ingestPort }}
+      targetPort: http-ingest
+      protocol: TCP
+      name: http-ingest
+    - port: {{ .Values.service.apiPort }}
+      targetPort: http-api
+      protocol: TCP
+      name: http-api
+  selector:
+    {{- include "log-socket.selectorLabels" . | nindent 4 }}

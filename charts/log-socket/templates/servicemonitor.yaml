@@ -1,0 +1,30 @@
+{{ if .Values.serviceMonitor.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "log-socket.fullname" . }}
+  namespace: {{ include "log-socket.namespace" . }}
+  labels:
+{{ include "log-socket.labels" . | indent 4 }}
+{{- with .Values.serviceMonitor.additionalLabels }}
+    {{- toYaml . | nindent 4 }}
+{{- end }}
+spec:
+  selector:
+    matchLabels:
+{{ include "log-socket.labels" . | indent 6 }}
+  endpoints:
+  - port: http-ingest
+    path: /metrics
+    {{- with .Values.serviceMonitor.metricsRelabelings }}
+    metricRelabelings:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+    {{- with .Values.serviceMonitor.relabelings }}
+    relabelings:
+      {{- toYaml . | nindent 4 }}
+    {{- end }}
+  namespaceSelector:
+    matchNames:
+    - {{ include "log-socket.namespace" . }}
+{{- end }}

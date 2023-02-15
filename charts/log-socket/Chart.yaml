@@ -1,0 +1,20 @@
+apiVersion: v2
+type: application
+name: log-socket
+version: 0.1.2
+appVersion: "0.0.3"
+kubeVersion: ">=1.16.0-0"
+description: A Helm chart for the log-socket service
+keywords:
+  - logging
+home: https://kube-logging.github.io
+sources:
+  - https://github.com/kube-logging/log-socket
+  - https://github.com/kube-logging/helm-charts/tree/main/charts/log-socket
+annotations:
+  artifacthub.io/changes: |
+    - kind: changed
+      description: Moved to to location
+  artifacthub.io/images: |
+    - name: logging-operator
+      image: ghcr.io/kube-logging/log-socket:v0.0.6
