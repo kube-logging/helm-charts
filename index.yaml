@@ -25,6 +25,31 @@ entries:
     urls:
     - https://github.com/kube-logging/helm-charts/releases/download/log-generator-0.2.0/log-generator-0.2.0.tgz
     version: 0.2.0
+  log-socket:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Moved to to location
+      artifacthub.io/images: |
+        - name: logging-operator
+          image: ghcr.io/kube-logging/log-socket:v0.0.6
+    apiVersion: v2
+    appVersion: 0.0.3
+    created: "2023-02-15T11:49:14.458549088Z"
+    description: A Helm chart for the log-socket service
+    digest: 50c4bc6c7bbd68287154bf0e1daff911256fb2975823274004e227818c07a823
+    home: https://kube-logging.github.io
+    keywords:
+    - logging
+    kubeVersion: '>=1.16.0-0'
+    name: log-socket
+    sources:
+    - https://github.com/kube-logging/log-socket
+    - https://github.com/kube-logging/helm-charts/tree/main/charts/log-socket
+    type: application
+    urls:
+    - https://github.com/kube-logging/helm-charts/releases/download/log-socket-0.1.2/log-socket-0.1.2.tgz
+    version: 0.1.2
   logging-demo:
   - annotations:
       artifacthub.io/changes: |
@@ -264,4 +289,4 @@ entries:
     urls:
     - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-logging-4.0.0-rc17/logging-operator-logging-4.0.0-rc17.tgz
     version: 4.0.0-rc17
-generated: "2023-02-15T11:45:33.259629088Z"
+generated: "2023-02-15T11:49:14.458574888Z"
