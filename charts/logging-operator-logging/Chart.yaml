@@ -23,6 +23,6 @@ annotations:
     - name: fluentd
       image: ghcr.io/banzaicloud/fluentd:v1.14.6-alpine-5
     - name: logging-operator
-      image: ghcr.io/kube-logging/logging-operator:4.0.0-rc19
+      image: ghcr.io/banzaicloud/logging-operator:4.0.0-rc19
     - name: config-reloader
       image: ghcr.io/banzaicloud/config-reloader:0.0.1
