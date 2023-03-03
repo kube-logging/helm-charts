@@ -16,5 +16,5 @@ annotations:
     - kind: changed
       description: Moved to to location
   artifacthub.io/images: |
-    - name: logging-operator
+    - name: log-generator
       image: ghcr.io/kube-logging/log-generator:v0.4.1
