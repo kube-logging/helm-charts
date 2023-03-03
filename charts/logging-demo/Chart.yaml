@@ -2,7 +2,6 @@ apiVersion: v2
 type: application
 name: logging-demo
 version: 4.0.0-rc18-1
-appVersion: 4.0.0-rc17
 kubeVersion: ">=1.16.0-0"
 description: Logging operator demo application
 keywords:
