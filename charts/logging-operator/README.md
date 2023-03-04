@@ -30,8 +30,8 @@ Use `createCustomResource=false` with Helm v3 to avoid trying to create CRDs fro
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | replicaCount | int | `1` |  |
-| image.repository | string | `"ghcr.io/banzaicloud/logging-operator"` | Name of the image repository to pull the container image from. |
-| image.tag | string | `"4.0.0-rc17"` | Image tag override for the default value (chart appVersion). |
+| image.repository | string | `"ghcr.io/kube-logging/logging-operator"` | Name of the image repository to pull the container image from. |
+| image.tag | string | `"4.0.0"` | Image tag override for the default value (chart appVersion). |
 | image.pullPolicy | string | `"IfNotPresent"` | [Image pull policy](https://kubernetes.io/docs/concepts/containers/images/#updating-images) for updating already existing images on a node. |
 | env | list | `[]` |  |
 | volumes | list | `[]` |  |

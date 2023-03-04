@@ -6,4 +6,4 @@ dependencies:
   repository: https://kubernetes-charts.banzaicloud.com/
   version: 0.1.20
 digest: sha256:37d6dcd2221164019afc1a9bb8dacc5ce6a99485355edab4671d70bf6bbd1b48
-generated: "2023-02-09T02:07:25.873775+01:00"
+generated: "2023-02-23T09:01:59.238533+01:00"

@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/kube-logging/log-generator
-  tag: 0.4.0
+  tag: v0.4.1
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
