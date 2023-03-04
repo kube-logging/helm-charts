@@ -16,7 +16,7 @@ helm install --generate-name --wait kube-logging/logging-demo
 ## Introduction
 
 This chart demonstrates the use of the [Logging Operator](https://github.com/kube-logging/helm-charts/tree/main/charts/logging-operator) with a
-[Log-Generator](https://github.com/banzaicloud/log-generator) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+[Log-Generator](https://github.com/kube-logging/log-generator) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 ## Prerequisites
 

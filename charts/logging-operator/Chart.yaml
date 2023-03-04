@@ -1,8 +1,8 @@
 apiVersion: v2
 type: application
 name: logging-operator
-version: 4.0.0-rc19-3
-appVersion: 4.0.0-rc19
+version: 4.0.0
+appVersion: 4.0.0
 kubeVersion: ">=1.16.0-0"
 description: Logging operator for Kubernetes based on Fluentd and Fluentbit.
 keywords:
@@ -19,4 +19,4 @@ annotations:
       description: Moved to to location
   artifacthub.io/images: |
     - name: logging-operator
-      image: ghcr.io/kube-logging/logging-operator:4.0.0-rc19
+      image: ghcr.io/kube-logging/logging-operator:4.0.0

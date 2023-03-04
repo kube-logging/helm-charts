@@ -1,8 +1,8 @@
 apiVersion: v2
 type: application
 name: logging-operator-logging
-version: 4.0.0-rc18-1
-appVersion: 4.0.0-rc17
+version: 4.0.0
+appVersion: 4.0.0
 kubeVersion: ">=1.16.0-0"
 description: A Helm chart to configure logging resource for the Logging operator.
 keywords:
@@ -21,8 +21,10 @@ annotations:
     - name: fluent-bit
       image: fluent/fluent-bit:1.9.5
     - name: fluentd
-      image: ghcr.io/banzaicloud/fluentd:v1.14.6-alpine-5
+      image: ghcr.io/kube-logging/fluentd:v1.14.6
+    - name: syslog-ng
+      image: ghcr.io/axoflow/syslog-ng:4.0.1_git20230225
     - name: logging-operator
-      image: ghcr.io/kube-logging/logging-operator:4.0.0-rc19
+      image: ghcr.io/kube-logging/logging-operator:4.0.0
     - name: config-reloader
-      image: ghcr.io/banzaicloud/config-reloader:0.0.1
+      image: ghcr.io/kube-logging/config-reloader:v0.0.2
