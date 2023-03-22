@@ -10,6 +10,30 @@ entries:
           image: ghcr.io/kube-logging/log-generator:v0.4.1
     apiVersion: v2
     appVersion: 0.4.1
+    created: "2023-03-22T09:50:54.943750756Z"
+    description: A Helm chart for Log-generator
+    digest: 7f3a9b6a708dfc4fe26974425884728d1bfe6458feac58552bfb641515ec3d96
+    home: https://kube-logging.github.io
+    keywords:
+    - logging
+    kubeVersion: '>=1.16.0-0'
+    name: log-generator
+    sources:
+    - https://github.com/kube-logging/log-generator
+    - https://github.com/kube-logging/helm-charts/tree/main/charts/log-generator
+    type: application
+    urls:
+    - https://github.com/kube-logging/helm-charts/releases/download/log-generator-0.2.2-dev.1/log-generator-0.2.2-dev.1.tgz
+    version: 0.2.2-dev.1
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Moved to to location
+      artifacthub.io/images: |
+        - name: log-generator
+          image: ghcr.io/kube-logging/log-generator:v0.4.1
+    apiVersion: v2
+    appVersion: 0.4.1
     created: "2023-03-03T13:13:32.895155207Z"
     description: A Helm chart for Log-generator
     digest: ec7adeb14df9b0531f88853f53e8c0f26a9ab6a8464c50695502af23722768ef
@@ -75,6 +99,39 @@ entries:
     - https://github.com/kube-logging/helm-charts/releases/download/log-socket-0.1.2/log-socket-0.1.2.tgz
     version: 0.1.2
   logging-demo:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Moved to to location
+    apiVersion: v2
+    appVersion: 4.0.0
+    created: "2023-03-22T09:50:55.091303218Z"
+    dependencies:
+    - condition: minio.enabled
+      name: minio
+      repository: https://helm.min.io/
+      version: 8.x.x
+    - condition: logGenerator.enabled
+      name: log-generator
+      repository: https://kubernetes-charts.banzaicloud.com/
+      version: 0.1.x
+    description: Logging operator demo application
+    digest: c2871f9388e95ca7aaae7c585384b91d44bb696cd962bf3ffbfa6687f8fe133c
+    home: https://kube-logging.github.io
+    keywords:
+    - logging
+    - fluentd
+    - fluentbit
+    - syslog-ng
+    kubeVersion: '>=1.16.0-0'
+    name: logging-demo
+    sources:
+    - https://github.com/kube-logging/logging-operator
+    - https://github.com/kube-logging/helm-charts/tree/main/charts/logging-demo
+    type: application
+    urls:
+    - https://github.com/kube-logging/helm-charts/releases/download/logging-demo-4.0.1-dev.1/logging-demo-4.0.1-dev.1.tgz
+    version: 4.0.1-dev.1
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -182,6 +239,32 @@ entries:
           image: ghcr.io/kube-logging/logging-operator:4.0.0
     apiVersion: v2
     appVersion: 4.0.0
+    created: "2023-03-22T09:50:55.272484991Z"
+    description: Logging operator for Kubernetes based on Fluentd and Fluentbit.
+    digest: 57561e9e44e99a58d7f9473d15703553d815dba72b13555fec4606503ab8d105
+    home: https://kube-logging.github.io
+    keywords:
+    - logging
+    - fluentd
+    - fluentbit
+    kubeVersion: '>=1.16.0-0'
+    name: logging-operator
+    sources:
+    - https://github.com/kube-logging/logging-operator
+    - https://github.com/kube-logging/helm-charts/tree/main/charts/logging-operator
+    type: application
+    urls:
+    - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-4.1.0-dev.1/logging-operator-4.1.0-dev.1.tgz
+    version: 4.1.0-dev.1
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Moved to to location
+      artifacthub.io/images: |
+        - name: logging-operator
+          image: ghcr.io/kube-logging/logging-operator:4.0.0
+    apiVersion: v2
+    appVersion: 4.0.0
     created: "2023-03-04T14:07:26.085018406Z"
     description: Logging operator for Kubernetes based on Fluentd and Fluentbit.
     digest: 2e849d1c4822ec7b1f54f3264eb43d8ef074ed1474e4c59ba8f4a14e16cbd616
@@ -252,6 +335,39 @@ entries:
     - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-4.0.0-rc19-1/logging-operator-4.0.0-rc19-1.tgz
     version: 4.0.0-rc19-1
   logging-operator-logging:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Moved to to location
+      artifacthub.io/images: |
+        - name: fluent-bit
+          image: fluent/fluent-bit:1.9.5
+        - name: fluentd
+          image: ghcr.io/kube-logging/fluentd:v1.14.6
+        - name: syslog-ng
+          image: ghcr.io/axoflow/syslog-ng:4.0.1_git20230225
+        - name: logging-operator
+          image: ghcr.io/kube-logging/logging-operator:4.0.0
+        - name: config-reloader
+          image: ghcr.io/kube-logging/config-reloader:v0.0.2
+    apiVersion: v2
+    created: "2023-03-22T09:50:55.413582393Z"
+    description: A Helm chart to configure logging resource for the Logging operator.
+    digest: 4eb4954deb5b03d74b7e637305d447cd63ef9b3f1850640617f678685cd62977
+    home: https://kube-logging.github.io
+    keywords:
+    - logging
+    - fluentd
+    - fluentbit
+    kubeVersion: '>=1.16.0-0'
+    name: logging-operator-logging
+    sources:
+    - https://github.com/kube-logging/logging-operator
+    - https://github.com/kube-logging/helm-charts/tree/main/charts/logging-operator-logging
+    type: application
+    urls:
+    - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-logging-4.1.0-dev.1/logging-operator-logging-4.1.0-dev.1.tgz
+    version: 4.1.0-dev.1
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -382,4 +498,4 @@ entries:
     urls:
     - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-logging-4.0.0-rc17/logging-operator-logging-4.0.0-rc17.tgz
     version: 4.0.0-rc17
-generated: "2023-03-04T14:07:26.26092155Z"
+generated: "2023-03-22T09:50:55.413966197Z"
