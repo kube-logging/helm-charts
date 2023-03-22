@@ -1,6 +1,6 @@
 # logging-demo
 
-![version: 4.0.0-rc18-1](https://img.shields.io/badge/version-4.0.0--rc18--1-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: 4.0.0-rc17](https://img.shields.io/badge/app%20version-4.0.0--rc17-informational?style=flat-square) ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-logging--demo-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/logging-demo)
+![version: 4.0.1-dev.1](https://img.shields.io/badge/version-4.0.1--dev.1-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: 4.0.0](https://img.shields.io/badge/app%20version-4.0.0-informational?style=flat-square) ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-logging--demo-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/logging-demo)
 
 Logging operator demo application
 
@@ -16,7 +16,7 @@ helm install --generate-name --wait kube-logging/logging-demo
 ## Introduction
 
 This chart demonstrates the use of the [Logging Operator](https://github.com/kube-logging/helm-charts/tree/main/charts/logging-operator) with a
-[Log-Generator](https://github.com/kube-logging/log-generator) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+[Log-Generator](https://github.com/banzaicloud/log-generator) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 ## Prerequisites
 

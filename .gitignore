@@ -2,3 +2,4 @@ bin/
 values.local.yaml
 values.test.yaml
 .DS_Store
+.idea
