@@ -19,7 +19,6 @@ spec:
           app.kubernetes.io/name: log-generator
           app.kubernetes.io/instance: {{ .Release.Name }}
   localOutputRefs:
-
 {{- if or .Values.file.enabled (and (not .Values.cloudwatch.enabled) (not .Values.elasticsearch.enabled) (not .Values.kafka.enabled) (not .Values.loki.enabled) (not .Values.minio.enabled) (not .Values.logdna.enabled)) }}
     - {{ include "output.fullname" . }}-file
 {{- end }}
