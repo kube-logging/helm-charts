@@ -292,11 +292,11 @@ spec:
                           properties:
                             backend_library:
                               type: string
-                            geoip_2_database:
-                              type: string
                             geoip_database:
                               type: string
                             geoip_lookup_keys:
+                              type: string
+                            geoip2_database:
                               type: string
                             records:
                               items:
@@ -5336,11 +5336,11 @@ spec:
                       properties:
                         backend_library:
                           type: string
-                        geoip_2_database:
-                          type: string
                         geoip_database:
                           type: string
                         geoip_lookup_keys:
+                          type: string
+                        geoip2_database:
                           type: string
                         records:
                           items:
@@ -17387,6 +17387,10 @@ spec:
                 additionalProperties:
                   type: boolean
                 type: object
+              problems:
+                items:
+                  type: string
+                type: array
             type: object
         type: object
     served: true
