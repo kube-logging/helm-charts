@@ -1,6 +1,6 @@
 # logging-operator
 
-![version: 4.0.0-rc19-3](https://img.shields.io/badge/version-4.0.0--rc19--3-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: 4.0.0-rc19](https://img.shields.io/badge/app%20version-4.0.0--rc19-informational?style=flat-square) ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-logging--operator-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/logging-operator)
+![version: 4.1.0-dev.2](https://img.shields.io/badge/version-4.1.0--dev.2-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: 4.0.0](https://img.shields.io/badge/app%20version-4.0.0-informational?style=flat-square) ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-logging--operator-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/logging-operator)
 
 Logging operator for Kubernetes based on Fluentd and Fluentbit.
 
@@ -31,7 +31,7 @@ Use `createCustomResource=false` with Helm v3 to avoid trying to create CRDs fro
 |-----|------|---------|-------------|
 | replicaCount | int | `1` |  |
 | image.repository | string | `"ghcr.io/kube-logging/logging-operator"` | Name of the image repository to pull the container image from. |
-| image.tag | string | `"4.0.0"` | Image tag override for the default value (chart appVersion). |
+| image.tag | string | `""` | Image tag override for the default value (chart appVersion). |
 | image.pullPolicy | string | `"IfNotPresent"` | [Image pull policy](https://kubernetes.io/docs/concepts/containers/images/#updating-images) for updating already existing images on a node. |
 | env | list | `[]` |  |
 | volumes | list | `[]` |  |

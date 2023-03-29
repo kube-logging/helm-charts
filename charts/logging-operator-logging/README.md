@@ -1,6 +1,6 @@
 # logging-operator-logging
 
-![version: 4.0.0-rc18-1](https://img.shields.io/badge/version-4.0.0--rc18--1-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: 4.0.0-rc17](https://img.shields.io/badge/app%20version-4.0.0--rc17-informational?style=flat-square) ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-logging--operator--logging-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/logging-operator-logging)
+![version: 4.1.0-dev.2](https://img.shields.io/badge/version-4.1.0--dev.2-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square)  ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-logging--operator--logging-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/logging-operator-logging)
 
 A Helm chart to configure logging resource for the Logging operator.
 
