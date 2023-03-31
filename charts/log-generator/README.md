@@ -1,6 +1,6 @@
 # log-generator
 
-![version: 0.2.2](https://img.shields.io/badge/version-0.2.2-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: v0.4.1](https://img.shields.io/badge/app%20version-v0.4.1-informational?style=flat-square) ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-log--generator-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/log-generator)
+![version: 0.2.3](https://img.shields.io/badge/version-0.2.3-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: v0.4.1](https://img.shields.io/badge/app%20version-v0.4.1-informational?style=flat-square) ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-log--generator-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/log-generator)
 
 A Helm chart for Log-generator
 
