@@ -286,6 +286,32 @@ entries:
         - name: logging-operator
           image: ghcr.io/kube-logging/logging-operator:4.0.0
     apiVersion: v2
+    appVersion: 4.1.0
+    created: "2023-04-16T15:08:57.705424273Z"
+    description: Logging operator for Kubernetes based on Fluentd and Fluentbit.
+    digest: 7750c98ea0419703f5df698f6d57fee48b51886046f1bd4e0bed8a4ecdd0a82b
+    home: https://kube-logging.github.io
+    keywords:
+    - logging
+    - fluentd
+    - fluentbit
+    kubeVersion: '>=1.16.0-0'
+    name: logging-operator
+    sources:
+    - https://github.com/kube-logging/logging-operator
+    - https://github.com/kube-logging/helm-charts/tree/main/charts/logging-operator
+    type: application
+    urls:
+    - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-4.1.0/logging-operator-4.1.0.tgz
+    version: 4.1.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Moved to to location
+      artifacthub.io/images: |
+        - name: logging-operator
+          image: ghcr.io/kube-logging/logging-operator:4.0.0
+    apiVersion: v2
     appVersion: 4.0.0
     created: "2023-03-29T08:06:42.29474539Z"
     description: Logging operator for Kubernetes based on Fluentd and Fluentbit.
@@ -409,6 +435,41 @@ entries:
     - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-4.0.0-rc19-1/logging-operator-4.0.0-rc19-1.tgz
     version: 4.0.0-rc19-1
   logging-operator-logging:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Moved to to location
+      artifacthub.io/images: |
+        - name: fluent-bit
+          image: fluent/fluent-bit:1.9.5
+        - name: fluentd
+          image: ghcr.io/kube-logging/fluentd:v1.14
+        - name: syslog-ng
+          image: ghcr.io/axoflow/syslog-ng:4.1.1
+        - name: logging-operator
+          image: ghcr.io/kube-logging/logging-operator:4.0.0
+        - name: config-reloader
+          image: ghcr.io/kube-logging/config-reloader:v0.0.2
+        - name: node-exporter
+          image: ghcr.io/kube-logging/node-exporter:v0.3.0
+    apiVersion: v2
+    created: "2023-04-16T15:08:57.835147324Z"
+    description: A Helm chart to configure logging resource for the Logging operator.
+    digest: ee0b4fc3cd6620278c7db74dcf753f65f13994e47c88e8d345bdf7da851dfb30
+    home: https://kube-logging.github.io
+    keywords:
+    - logging
+    - fluentd
+    - fluentbit
+    kubeVersion: '>=1.16.0-0'
+    name: logging-operator-logging
+    sources:
+    - https://github.com/kube-logging/logging-operator
+    - https://github.com/kube-logging/helm-charts/tree/main/charts/logging-operator-logging
+    type: application
+    urls:
+    - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-logging-4.1.0/logging-operator-logging-4.1.0.tgz
+    version: 4.1.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -642,4 +703,4 @@ entries:
     urls:
     - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-logging-4.0.0-rc17/logging-operator-logging-4.0.0-rc17.tgz
     version: 4.0.0-rc17
-generated: "2023-04-02T21:35:05.371018848Z"
+generated: "2023-04-16T15:08:57.835223824Z"
