@@ -1,8 +1,8 @@
 apiVersion: v2
 type: application
 name: log-generator
-version: 0.2.3
-appVersion: v0.4.1
+version: 0.5.0
+appVersion: v0.5.0
 kubeVersion: ">=1.16.0-0"
 description: A Helm chart for Log-generator
 keywords:
@@ -17,4 +17,4 @@ annotations:
       description: Moved to to location
   artifacthub.io/images: |
     - name: log-generator
-      image: ghcr.io/kube-logging/log-generator:v0.4.1
+      image: ghcr.io/kube-logging/log-generator:v0.5.0
