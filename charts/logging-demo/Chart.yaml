@@ -1,7 +1,7 @@
 apiVersion: v2
 type: application
 name: logging-demo
-version: 4.0.1-dev.1
+version: 4.0.2
 appVersion: 4.0.0
 kubeVersion: ">=1.16.0-0"
 description: Logging operator demo application
@@ -25,6 +25,6 @@ dependencies:
     repository: https://helm.min.io/
     condition: minio.enabled
   - name: log-generator
-    version: 0.1.x
-    repository: https://kubernetes-charts.banzaicloud.com/
+    version: 0.2.x
+    repository: https://kube-logging.github.io/helm-charts
     condition: logGenerator.enabled
