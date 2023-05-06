@@ -6,4 +6,4 @@ upgrade: true
 validate-maintainers: false
 chart-repos:
   - minio=https://helm.min.io/
-  - banzaicloud=https://kubernetes-charts.banzaicloud.com/
+  - kube-logging=https://kube-logging.github.io/helm-charts
