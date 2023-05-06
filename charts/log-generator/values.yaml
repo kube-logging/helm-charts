@@ -24,7 +24,7 @@ podSecurityContext: {}
   # fsGroup: 2000
 
 securityContext: {}
-  # capabilities: banzaicloud/log-generator
+  # capabilities:
   #   drop:
   #   - ALL
   # readOnlyRootFilesystem: true
