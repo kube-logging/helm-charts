@@ -1,3 +1,4 @@
+charts/*/charts
 bin/
 values.local.yaml
 values.test.yaml
