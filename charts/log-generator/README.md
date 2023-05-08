@@ -1,6 +1,6 @@
 # log-generator
 
-![version: 0.5.1](https://img.shields.io/badge/version-0.5.1-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: v0.5.0](https://img.shields.io/badge/app%20version-v0.5.0-informational?style=flat-square) ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-log--generator-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/log-generator)
+![version: 0.5.2](https://img.shields.io/badge/version-0.5.2-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: v0.5.0](https://img.shields.io/badge/app%20version-v0.5.0-informational?style=flat-square) ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-log--generator-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/log-generator)
 
 A Helm chart for Log-generator
 
@@ -19,6 +19,7 @@ helm install --generate-name --wait kube-logging/log-generator
 |-----|------|---------|-------------|
 | replicaCount | int | `1` |  |
 | image.repository | string | `"ghcr.io/kube-logging/log-generator"` |  |
+| image.tag | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | imagePullSecrets | list | `[]` |  |
 | nameOverride | string | `""` |  |
