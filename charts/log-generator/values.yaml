@@ -39,8 +39,8 @@ app:
   # Maximum interval between log messages (s) (Default: 1)
   maxInterval: 1
   # maxInterval: 1
-  # The amount of log message to emit. (Default: 0)
-  count: 0
+  # The amount of log message to emit. (Default: 0, -1 to generate logs indefinitely)
+  count: -1
   # Randomise log content (Default: true)
   randomise: true
   # The amount of log message to emit/s (Default: 1)
