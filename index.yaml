@@ -7,6 +7,30 @@ entries:
           description: Moved to to location
       artifacthub.io/images: |
         - name: log-generator
+          image: ghcr.io/kube-logging/log-generator:v0.6.0
+    apiVersion: v2
+    appVersion: v0.6.0
+    created: "2023-05-12T12:12:32.041042029Z"
+    description: A Helm chart for Log-generator
+    digest: 9c8767f7944240a66bb54be236192efd4e4c68f35bb434bd0b0a74db9946bcad
+    home: https://kube-logging.github.io
+    keywords:
+    - logging
+    kubeVersion: '>=1.16.0-0'
+    name: log-generator
+    sources:
+    - https://github.com/kube-logging/log-generator
+    - https://github.com/kube-logging/helm-charts/tree/main/charts/log-generator
+    type: application
+    urls:
+    - https://github.com/kube-logging/helm-charts/releases/download/log-generator-0.6.0/log-generator-0.6.0.tgz
+    version: 0.6.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Moved to to location
+      artifacthub.io/images: |
+        - name: log-generator
           image: ghcr.io/kube-logging/log-generator:v0.5.0
     apiVersion: v2
     appVersion: v0.5.0
@@ -841,4 +865,4 @@ entries:
     urls:
     - https://github.com/kube-logging/helm-charts/releases/download/logging-operator-logging-4.0.0-rc17/logging-operator-logging-4.0.0-rc17.tgz
     version: 4.0.0-rc17
-generated: "2023-05-08T14:04:22.229625155Z"
+generated: "2023-05-12T12:12:32.041140929Z"
