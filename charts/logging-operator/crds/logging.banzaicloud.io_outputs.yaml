@@ -4334,6 +4334,8 @@ spec:
                     type: string
                   ssl_verify:
                     type: boolean
+                  ssl_version:
+                    type: string
                   suppress_doc_wrap:
                     type: boolean
                   suppress_type_name:
@@ -10233,6 +10235,8 @@ spec:
                     type: string
                   ssl_verify:
                     type: boolean
+                  ssl_version:
+                    type: string
                   suppress_doc_wrap:
                     type: boolean
                   suppress_type_name:
