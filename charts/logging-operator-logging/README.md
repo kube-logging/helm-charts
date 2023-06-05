@@ -1,6 +1,6 @@
 # logging-operator-logging
 
-![version: 4.1.0](https://img.shields.io/badge/version-4.1.0-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square)  ![kube version: >=1.16.0-0](https://img.shields.io/badge/kube%20version->=1.16.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-logging--operator--logging-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/logging-operator-logging)
+![version: 4.2.0](https://img.shields.io/badge/version-4.2.0-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square)  ![kube version: >=1.22](https://img.shields.io/badge/kube%20version->=1.22-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-logging--operator--logging-informational?style=flat-square)](https://artifacthub.io/packages/helm/kube-logging/logging-operator-logging)
 
 A Helm chart to configure logging resource for the Logging operator.
 
@@ -27,7 +27,9 @@ helm install --generate-name --wait kube-logging/logging-operator-logging
 | flowConfigCheckDisabled | bool | `false` | Disable configuration check before applying new fluentd configuration. |
 | skipInvalidResources | bool | `false` | Whether to skip invalid Flow and ClusterFlow resources |
 | flowConfigOverride | string | `""` | Override generated config. This is a raw configuration string for troubleshooting purposes. |
+| fluentbitDisabled | bool | `false` | Flag to disable fluentbit completely |
 | fluentbit | object | `{}` | Fluent-bit configurations https://kube-logging.github.io/docs/configuration/crds/v1beta1/fluentbit_types/ |
+| fluentdDisabled | bool | `false` | Flag to disable fluentd completely |
 | fluentd | object | `{}` | Fluentd configurations https://kube-logging.github.io/docs/configuration/crds/v1beta1/fluentd_types/ |
 | syslogNG | object | `{}` | Syslog-NG statefulset configuration |
 | defaultFlow | object | `{}` | Default flow for unmatched logs. This Flow configuration collects all logs that didn’t matched any other Flow. |

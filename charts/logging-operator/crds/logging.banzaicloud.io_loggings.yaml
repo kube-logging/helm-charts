@@ -985,10 +985,14 @@ spec:
                           type: object
                       type: object
                     type: array
+                  flowLabel:
+                    type: string
                   globalOutputRefs:
                     items:
                       type: string
                     type: array
+                  includeLabelInRouter:
+                    type: boolean
                   outputRefs:
                     items:
                       type: string
@@ -1006,6 +1010,8 @@ spec:
                 properties:
                   HostNetwork:
                     type: boolean
+                  LoggingRef:
+                    type: string
                   affinity:
                     properties:
                       nodeAffinity:
@@ -1579,6 +1585,10 @@ spec:
                                   - Lowercase
                                   - uppercase
                                   - Uppercase
+                                  - keepequal
+                                  - KeepEqual
+                                  - dropequal
+                                  - DropEqual
                                   type: string
                                 modulus:
                                   format: int64
@@ -1622,6 +1632,10 @@ spec:
                                   - Lowercase
                                   - uppercase
                                   - Uppercase
+                                  - keepequal
+                                  - KeepEqual
+                                  - dropequal
+                                  - DropEqual
                                   type: string
                                 modulus:
                                   format: int64
@@ -1725,6 +1739,8 @@ spec:
                     format: int32
                     type: integer
                   customConfigSecret:
+                    type: string
+                  customParsers:
                     type: string
                   daemonsetAnnotations:
                     additionalProperties:
@@ -2285,6 +2301,10 @@ spec:
                                   - Lowercase
                                   - uppercase
                                   - Uppercase
+                                  - keepequal
+                                  - KeepEqual
+                                  - dropequal
+                                  - DropEqual
                                   type: string
                                 modulus:
                                   format: int64
@@ -2328,6 +2348,10 @@ spec:
                                   - Lowercase
                                   - uppercase
                                   - Uppercase
+                                  - keepequal
+                                  - KeepEqual
+                                  - dropequal
+                                  - DropEqual
                                   type: string
                                 modulus:
                                   format: int64
@@ -3642,6 +3666,10 @@ spec:
                                   - Lowercase
                                   - uppercase
                                   - Uppercase
+                                  - keepequal
+                                  - KeepEqual
+                                  - dropequal
+                                  - DropEqual
                                   type: string
                                 modulus:
                                   format: int64
@@ -3685,6 +3713,10 @@ spec:
                                   - Lowercase
                                   - uppercase
                                   - Uppercase
+                                  - keepequal
+                                  - KeepEqual
+                                  - dropequal
+                                  - DropEqual
                                   type: string
                                 modulus:
                                   format: int64
@@ -4481,6 +4513,10 @@ spec:
                                   - Lowercase
                                   - uppercase
                                   - Uppercase
+                                  - keepequal
+                                  - KeepEqual
+                                  - dropequal
+                                  - DropEqual
                                   type: string
                                 modulus:
                                   format: int64
@@ -4524,6 +4560,10 @@ spec:
                                   - Lowercase
                                   - uppercase
                                   - Uppercase
+                                  - keepequal
+                                  - KeepEqual
+                                  - dropequal
+                                  - DropEqual
                                   type: string
                                 modulus:
                                   format: int64
@@ -9610,6 +9650,10 @@ spec:
                                         - Lowercase
                                         - uppercase
                                         - Uppercase
+                                        - keepequal
+                                        - KeepEqual
+                                        - dropequal
+                                        - DropEqual
                                         type: string
                                       modulus:
                                         format: int64
@@ -9653,6 +9697,10 @@ spec:
                                         - Lowercase
                                         - uppercase
                                         - Uppercase
+                                        - keepequal
+                                        - KeepEqual
+                                        - dropequal
+                                        - DropEqual
                                         type: string
                                       modulus:
                                         format: int64
@@ -10270,6 +10318,10 @@ spec:
                                   - Lowercase
                                   - uppercase
                                   - Uppercase
+                                  - keepequal
+                                  - KeepEqual
+                                  - dropequal
+                                  - DropEqual
                                   type: string
                                 modulus:
                                   format: int64
@@ -10313,6 +10365,10 @@ spec:
                                   - Lowercase
                                   - uppercase
                                   - Uppercase
+                                  - keepequal
+                                  - KeepEqual
+                                  - dropequal
+                                  - DropEqual
                                   type: string
                                 modulus:
                                   format: int64
@@ -13604,6 +13660,13 @@ spec:
                     type: object
                   globalOptions:
                     properties:
+                      stats:
+                        properties:
+                          freq:
+                            type: integer
+                          level:
+                            type: integer
+                        type: object
                       stats_freq:
                         type: integer
                       stats_level:
@@ -13664,6 +13727,10 @@ spec:
                                   - Lowercase
                                   - uppercase
                                   - Uppercase
+                                  - keepequal
+                                  - KeepEqual
+                                  - dropequal
+                                  - DropEqual
                                   type: string
                                 modulus:
                                   format: int64
@@ -13707,6 +13774,10 @@ spec:
                                   - Lowercase
                                   - uppercase
                                   - Uppercase
+                                  - keepequal
+                                  - KeepEqual
+                                  - dropequal
+                                  - DropEqual
                                   type: string
                                 modulus:
                                   format: int64
